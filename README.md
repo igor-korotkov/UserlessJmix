@@ -5,8 +5,8 @@ docker compose -f ./docker/docker-compose.yml up
 
 Import Keycloak realm from ./keycloak/realm-export.json
 
-This will add a userless-jmix client, a mapper to map roles into "roles" claim of the ID Token, and two default users - alice/alice and bob/bob
+This will add a userless-jmix client, a mapper to map roles into "roles" claim of the ID Token. 
 
-Alice has the "manager" role allowing access to the application screens.
+Since realm export file doesn't include users, you'll need to create some manually.
 
-Bob doesn't have the "manager" role.
+Go to Users -> Add User -> enter username -> Save. Go to Role Mappings -> assign "manager" role. Go to Credentials and set user password.
