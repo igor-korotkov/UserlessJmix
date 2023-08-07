@@ -5,7 +5,7 @@ docker compose -f ./docker/docker-compose.yml up
 
 Import Keycloak realm from ./keycloak/realm-export.json
 
-This will add a userless-jmix client, a mapper to map roles into "roles" claim of the ID Token. 
+This will add a userless-jmix client, a mapper to map Keycloak client's roles into a "roles" claim of the ID Token. 
 
 Since realm export file doesn't include users, you'll need to create some manually.
 
